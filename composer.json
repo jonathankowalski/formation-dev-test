@@ -1,0 +1,31 @@
+{
+    "name": "jonathankowalski/formation-dev-test",
+    "authors": [
+        {
+            "name": "Jonathan Kowalski",
+            "email": "jonathan.kowalski@laposte.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php-di/php-di": "^6.0",
+        "nyholm/psr7": "^1.0",
+        "nyholm/psr7-server": "^0.3.0",
+        "ext-json": "*",
+        "monolog/monolog": "^1.24",
+        "omega/core": "^1.0",
+        "omega/engine-slim": "dev-master",
+        "omega/renderer-html": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "behat/behat": "^3.5",
+        "symfony/panther": "^0.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FormDev\\TauxCalc\\": "src/",
+            "FormDev\\TauxCalc\\Tests\\": "tests/"
+        }
+    }
+}

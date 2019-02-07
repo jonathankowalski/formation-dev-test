@@ -1,0 +1,20 @@
+{
+  "name": "formation-dev-test",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/jonathankowalski/formation-dev-test.git",
+  "author": "Jonathan Kowalski <jonathan.kowalski@laposte.net>",
+  "license": "MIT",
+  "dependencies": {
+    "mustache": "^3.0.1",
+    "superagent": "^4.1.0"
+  },
+  "scripts": {
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
