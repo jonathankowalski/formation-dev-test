@@ -1,4 +1,6 @@
 language: php
+addons:
+  chrome: stable
 
 php:
   - 7.1
