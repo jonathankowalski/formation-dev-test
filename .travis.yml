@@ -10,7 +10,9 @@ before_script:
 script:
   - mkdir -p build/logs
   - mkdir -p build/proxy
+  - php -S localhost:8090 -t public/
   - phpunit
+  - php vendor/bin/behat
 
 after_success:
   - travis_retry php vendor/bin/coveralls -v

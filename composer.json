@@ -20,7 +20,8 @@
     "require-dev": {
         "phpunit/phpunit": "^7.5",
         "behat/behat": "^3.5",
-        "symfony/panther": "^0.2.0"
+        "symfony/panther": "^0.2.0",
+        "satooshi/php-coveralls": "^1.0"
     },
     "autoload": {
         "psr-4": {
