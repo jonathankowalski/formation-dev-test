@@ -10,6 +10,7 @@ before_script:
 script:
   - mkdir -p build/logs
   - mkdir -p build/proxy
+  - mkdir -p session
   - phpunit
   - php vendor/bin/behat
 
