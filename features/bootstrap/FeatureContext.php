@@ -1,17 +1,18 @@
 <?php
 
-use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
-use Symfony\Component\Panther\Client;
 use FormDev\TauxCalc\Tx\Echeance;
 use PHPUnit\Framework\Assert;
 use Facebook\WebDriver\WebDriverBy;
+use Symfony\Component\Panther\PantherTestCaseTrait;
 
 /**
  * Defines application features from the specific context.
  */
 class FeatureContext implements Context
 {
+    use PantherTestCaseTrait;
+
     private $client;
     private $crawler;
     private $result;
@@ -31,12 +32,13 @@ class FeatureContext implements Context
     {
         $this->result = 0;
         $this->echeance = new Echeance;
+        $_SERVER['PANTHER_NO_SANDBOX'] = 1;
     }
 
     private function getClient()
     {
         if (!$this->client) {
-            $this->client = Client::createChromeClient();
+            $this->client = self::createPantherClient();
         }
         return $this->client;
     }
@@ -44,7 +46,7 @@ class FeatureContext implements Context
     private function getCrawler()
     {
         if (!$this->crawler) {
-            $this->crawler = $this->getClient()->request('GET', 'http://localhost:8090');
+            $this->crawler = $this->getClient()->request('GET', '/');
         }
         return $this->crawler;
     }
